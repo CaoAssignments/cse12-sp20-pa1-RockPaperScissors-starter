@@ -118,6 +118,8 @@ We tied: 33.33%
 
 Do not change the starter code. However, you may add additional helper methods.
 Your task is to implment the following methods:
+* `public RockPaperScissors()`
+    - constructor for the class, initializes the member 
 * `static String genCPUMove()` 
     - generates a random String ("r", "s", or "p")
 * `public void expandCapacity()`  
