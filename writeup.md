@@ -6,7 +6,7 @@
 ### Useful Resources:
 Throughout this assignment, you may find the following resources helpful.  Refer to them BEFORE posting questions on Piazza.
 - [Connecting to the lab machines remotely](https://docs.google.com/document/d/1AM888aGCagZRQYSY3wgtzboTnHHzLOEnuUgl85_oMJQ/edit)
-- [running bash on Windows](https://docs.google.com/document/d/1SMnopsKw0lHWCxkQ0ETgkfLFdfonjGGh4CgfagnFcSU/edit)
+- [running bash on Windows](https://drive.google.com/file/d/1bFXllnDhmDjTE5831Zxs8-ooIbHlpPQG/view?usp=sharing)
 - [Unix reference sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
 - [JUnit testing tutorial](https://www.tutorialspoint.com/junit/junit_environment_setup.htm)
 
