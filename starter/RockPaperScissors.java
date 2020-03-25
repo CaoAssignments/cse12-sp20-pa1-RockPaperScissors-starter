@@ -4,7 +4,7 @@
  * @date The date
  * */
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -16,7 +16,7 @@ import java.util.Random;
 public class RockPaperScissors
 {
     String[] systemMoves;			// Stores the computer's moves
-    LinkedList<String> userMoves;	// Stores the user's moves
+    ArrayList<String> userMoves;	// Stores the user's moves
     int initialCapacity = 5 ;       // Initial capacity of systemMoves
     int size;                       // Number of moves the system makes
     boolean playing;                // If user is still playing game or not
@@ -47,7 +47,7 @@ public class RockPaperScissors
     "Thanks for playing!\nOur most recent games were: ";
     private static final String SYS_USR_MOVES = "Me: %s, You: %s\n";
     private static final String OVERALL_STATS =
-    "Our overall stats are:\nI won: %f%%\nYou won: %f%%\nWe tied: %f%%\n";
+    "Our overall stats are:\nI won: %.2f%%\nYou won: %.2f%%\nWe tied: %.2f%%\n";
     private static final String PROMPT_MOVE =
     "Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)";
 
@@ -64,7 +64,7 @@ public class RockPaperScissors
      * Generates next cpu move
      * @return String - "r", "p", or "s" depending on random int
      */
-    static String genCpuMove() {
+    static String genCPUMove() {
 		//TODO
     }
 
@@ -146,7 +146,7 @@ public class RockPaperScissors
         	System.out.println(PROMPT_MOVE);
         	String userMove = in.nextLine();
         	// Generate computer's move
-        	String cpuMove = genCpuMove();
+        	String cpuMove = genCPUMove();
         	game.play(userMove, cpuMove);
         }
 
