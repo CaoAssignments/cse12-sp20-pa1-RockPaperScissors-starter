@@ -1,4 +1,4 @@
-# CSE 12 - Spring 2020 PA1 - Warm up, and some fun with Rock, Paper, Scissors (100 points)
+# CSE 12 Spring 2020 PA1 - Warm up, and some fun with Rock, Paper, Scissors (100 points)
 
 **Due date: Monday, April 6 @ 11:59PM**  
 (Tuesday, April 7 @ 11:59pm w/ slip day)
@@ -144,3 +144,6 @@ Here are some detailed requirements of the game play and specifics about the pro
 
 * In `genCPUMove()`, it’s up to you on how the computer player chooses its moves, but there are two rules 1) the moves can not be the same every time, 2) it cannot cheat.  That is, it cannot look at the user’s move and then decide how to move.  It can, however, look at the user’s move history as well as its own history.  You can do something as simple as having it choose a random move every time.  But if you’d like to get more sophisticated, you should try to make the best player out there by taking into account what you know about how the user plays. It’s amazing how “smart” you can make your program with just a little information.  **If you do get creative here, make sure you document your approach in your header comment at the top of your RockPaperScissors.java file.**
 * Your program should generate no exceptions under (almost) any circumstances. Try to break it with bad input.
+
+## Submission
+[//]: # (TODO: Add submission instructions for Gradescope)
