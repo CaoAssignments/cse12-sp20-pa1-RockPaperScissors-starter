@@ -1,7 +1,7 @@
-# CSE 12 - Spring 2020 HW #1
-## Warm up, and some fun with Rock, Paper, Scissors (100 points)
-### **Due Monday, April 6th at 11:59pm**
+# CSE 12 - Spring 2020 PA1 - Warm up, and some fun with Rock, Paper, Scissors (100 points)
 
+**Due date: Monday, April 6 @ 11:59PM**  
+(Tuesday, April 7 @ 11:59pm w/ slip day)
 ### Useful Resources:
 Throughout this assignment, you may find the following resources helpful.  Refer to them BEFORE posting questions on Piazza.
 - [Connecting to the lab machines remotely](https://docs.google.com/document/d/1AM888aGCagZRQYSY3wgtzboTnHHzLOEnuUgl85_oMJQ/edit)
@@ -118,16 +118,14 @@ We tied: 33.33%
 
 Do not change the starter code. However, you may add additional helper methods.
 Your task is to implment the following methods:
-* `public RockPaperScissors()`
-    - constructor for the class, initializes the member 
-* `static String genCPUMove()` 
-    - generates a random String ("r", "s", or "p")
-* `public void expandCapacity()`  
-    - doubles the size of the systemMoves array
-* `public void addSystemMove(String myMove)`  
-    - adds myMove to the end of the systemMoves array 
-* `public void play(String playerMove, String compMove)` 
-    - determines game outcome and increments variables accordingly
+
+| Method Name | Description |
+|-------------|-------------|
+| `public RockPaperScissors()`| constructor for the class, initializes the member | T
+| `static String genCPUMove()` | generates a random String ("r", "s", or "p")|
+| `public void expandCapacity()`   | doubles the size of the systemMoves array|
+| `public void addSystemMove(String myMove)` | adds myMove to the end of the systemMoves array |
+| `public void play(String playerMove, String compMove)` | determines game outcome and increments variables accordingly|
 
 We have given you the `main()` method as well as `end()`. Do not modify `end()`. You are, however, welcome to change main() while testing. Make sure before you submit that your code runs with the original `main()` method given.  
 * `main()` : while playing is true, get the user's move and the computer's move and calls the `play` method.
