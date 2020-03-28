@@ -147,12 +147,18 @@ Here are some detailed requirements of the game play and specifics about the pro
 * In the starter code, we have proivded the necessary Strings for when you need to print. Use these for consistency for when we test your output. 
 * The game should track the full move history for both players.  It should store the move history of the system in an array of Strings (`systemMoves`) and the move history of the user in a ArrayList of Strings (`userMoves`).  These variables are already set up in the starter code.  You just need to use them.
 * The array that stores the system’s moves should be initialized to a capacity of 5 in the constructor. In your `addSystemMove` method you will need to check when the capacity is reached before you add the computer's move to the array. As the system enters more moves than the array can hold, use `expandCapacity()` to make a new array and copy over the contents of the old one.  The new array should always be twice the size of the old array.  E.g. on the 6th move, the array becomes size 10, on the 11th move it becomes size 20, etc.  You must do this resizing and copying “from scratch”.  That is, you have to write the code yourself, and **may NOT use any method in Java’s Arrays class. You will only receive half credit if you do.** 
+* You should add to the end, or the "first empty index" in the system's moves array. For example when adding "s":
+    * [null, null, null, null, null] -> ["s", null, null, null, null]
+    * ["r", "p", null, null, null] -> ["r", "p", "s", null, null]
 * Your program should gracefully handle incorrect input by re-prompting the user until they enter valid input.  You should look for the letters r, s and p exactly.
 * The game should repeat until the user enters "q"
 * At the end of the game, the system should print out up to the last 10 games, in reverse order.  If there has not been 10 games, it should print out as many as has been played. It should also print the win and tie statistics as in the example. Use the provided `end()` method to achieve this. 
 
 * In `genCPUMove()`, it’s up to you on how the computer player chooses its moves, but there are two rules 1) the moves can not be the same every time, 2) it cannot cheat.  That is, it cannot look at the user’s move and then decide how to move.  It can, however, look at the user’s move history as well as its own history.  You can do something as simple as having it choose a random move every time.  But if you’d like to get more sophisticated, you should try to make the best player out there by taking into account what you know about how the user plays. It’s amazing how “smart” you can make your program with just a little information.  **If you do get creative here, make sure you document your approach in your header comment at the top of your RockPaperScissors.java file.**
 * Your program should generate no exceptions under (almost) any circumstances. Try to break it with bad input.
+
+
+* Look at Problem 1 as a reference on how to run RockPaperScissorsTest.java with JUnit.
 
 ## Submission
 [//]: # (TODO: Add submission instructions for Gradescope)
