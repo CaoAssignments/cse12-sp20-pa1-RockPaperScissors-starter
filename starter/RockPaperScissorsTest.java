@@ -1,4 +1,4 @@
-import org.junit.Test;
+
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -6,56 +6,55 @@ import java.io.InputStream;
 
 import static org.junit.Assert.*;
 
+import java.util.Collection;
+import java.util.Arrays;
+
+
+import org.junit.*;
+
 
 public class RockPaperScissorsTest {
 
     @Test
-    public void mainSanity_v() throws IOException {
-        String[] args = null;
-        final InputStream original = System.in;
+    public void playSanity_v() throws IOException {
+        RockPaperScissors testGame = new RockPaperScissors();
 
-        String initialString = "p\np\nq\n";
-        final InputStream fips = new ByteArrayInputStream(initialString.getBytes());
+        testGame.play("p", "r");
+        testGame.play("r", "s");
+        testGame.play("s", "p");
 
-        System.setIn(fips);
-        RockPaperScissors.initialCapacity=3;
-        RockPaperScissors.main(args);
-        System.setIn(original);
-
-        String[] ans = {"p", "p"};
-        assertArrayEquals(RockPaperScissors.userMoves.toArray(), ans);
-        assertEquals(RockPaperScissors.systemMoves.length, 3);
+        String[] ans = {"p", "r", "s"};
+        assertArrayEquals(testGame.userMoves.toArray(), ans);
+        assertEquals(testGame.systemMoves.length, 5);
     }
 
     @Test
-    public void checkDoubling_v() throws IOException {
-        String[] args = null;
-        final InputStream original = System.in;
+    public void expandCapacitySanity_v() throws IOException {
+        RockPaperScissors testGame = new RockPaperScissors();
+        testGame.play("p", "r");
+        testGame.play("r", "s");
+        testGame.play("s", "p");
+        testGame.play("p", "r");
+        testGame.play("r", "s");
+        testGame.play("s", "p");
 
-        String initialString = "r\nr\nr\nr\nq\n";
-        final InputStream fips = new ByteArrayInputStream(initialString.getBytes());
-
-        System.setIn(fips);
-        RockPaperScissors.initialCapacity=3;
-        RockPaperScissors.main(args);
-        System.setIn(original);
-
-        assertEquals(RockPaperScissors.systemMoves.length, 6);
+        assertEquals(testGame.systemMoves.length, 10);
     }
 
     @Test
-    public void checkCounter_v() throws IOException {
-        String[] args = null;
-        final InputStream original = System.in;
+    public void checkCounters_v() throws IOException {
+        RockPaperScissors testGame = new RockPaperScissors();
+        System.out.println(testGame.playerWin.getCount());
+        testGame.play("p", "r");
+        testGame.play("r", "s");
+        testGame.play("s", "p");
+        testGame.play("s", "r");
+        testGame.play("p", "s");
+        testGame.play("r", "p");
 
-        String initialString = "r\nr\nr\nr\nr\nr\nr\nr\nr\nr\nr\nr\nq\n";
-        final InputStream fips = new ByteArrayInputStream(initialString.getBytes());
-
-        System.setIn(fips);
-        RockPaperScissors.main(args);
-        System.setIn(original);
-
-        assertEquals(RockPaperScissors.totalGames.getCount(), 12);
+        assertEquals(testGame.totalGames.getCount(), 6);
+        assertEquals(testGame.playerWin.getCount(), 3);
+        assertEquals(testGame.cpuWin.getCount(), 3);
 
     }
 }
