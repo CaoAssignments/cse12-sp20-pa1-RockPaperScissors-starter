@@ -32,8 +32,6 @@ NAME: <your name>
 ID: <your student ID>  
 EMAIL: <your email>  
 
-### How to submit your homework
-Instructions on how to submit your assignment will be posted on Piazza on #TODO (updated date)  Wednesday (10/3).
 
 ## Getting Started
 We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://docs.google.com/document/d/1AM888aGCagZRQYSY3wgtzboTnHHzLOEnuUgl85_oMJQ/edit?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.  
@@ -48,8 +46,19 @@ The purpose of this problem is to get you comfortable with JUnit 4 on the comman
 Clone/download the files from [this GitHub repository](https://github.com/CaoAssignments/cse12sp20-pa1-starter).
 - For more information on how to use GitHub to retrieve the files refer to [this documentation](https://drive.google.com/file/d/1GYDOmK5i1fUK_vLGY6C25G59chw79Tt_/view?usp=sharing).
 
-For this problem, you will write JUnit tests and run them from the command line. If you are working on your own machine, follow the [instructions here](https://www.tutorialspoint.com/junit/junit_environment_setup.htm) to install **JUnit 4** (NOT JUnit 5) on your own machine.  **Note**: that these instructions omit the step where you need to add the hamcrest-core file to your CLASSPATH (you need to do this or you will get a compile error).  
-Now, open the CounterTest.java file in an editor.  Most of this file is already complete, and you should be able to compile and run it (see below).   However, there are some ‘TODO:’  marked in comments where you are to complete the code. These completions include adding comments at the top of the file and completing the code to properly run some of the unit tests against the Counter class.  When you run the unit tests, they should make reasonable tests and print out the following when running the JUnitCore TestRunner.
+For this problem, you will write JUnit tests and run them from the command line. We will be running the JUnit tests by specifying the necessary .jar files (contained in the lib directory of this PA) in our classpath when compiling and executing. This allows the Java runtime environment to search for classes and necessary resource files (read more about this [here](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html)).
+
+Now, open the CounterTest.java file in an editor. Most of this file is already complete, and you should be able to compile and run it (see below). However, there are some ‘TODO:’ marked in comments where you are to complete the code. These completions include adding comments at the top of the file and completing the code to properly run some of the unit tests against the Counter class. When you run the unit tests, they should make reasonable tests and print out the following.
+
+Running on UNIX based systems:
+- Compile: `javac -cp ../libs/junit-4.12.jar:../libs/hamcrest-core-1.3.jar:. Counter.java CounterTest.java`
+- Execute: `java -cp ../libs/junit-4.12.jar:../libs/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore CounterTest`
+
+Running on Windows systems:
+- Compile: `javac -cp ..\libs\junit-4.12.jar;..\libs\hamcrest-core-1.3.jar; Counter.java CounterTest.java`
+- Execute: `java -cp ..\libs\junit-4.12.jar;..\libs\hamcrest-core-1.3.jar; org.junit.runner.JUnitCore CounterTest`
+
+Running these commands will result in output like this:
 
 ```
 .Checking Default Counter Value is Zero
@@ -65,7 +74,7 @@ OK (5 tests)
 
 Steps to complete for this problem:
 1. First, complete the TODO items in CounterTest.java.
-2. Next, run all of the tests from the command line.  You will need to figure out the proper sequence of commands to do this. Feel free to talk to a tutor/TA or to use Google for help. 
+2. Next, run all of the tests from the command line. 
 3. Finally, modify Counter.java so that your Reset test fails.  The version  of Counter.java that does not pass the Reset test is the version you should turn in. To be clear, Counter.java must compile but it should fail a reasonable Reset test.  We will run your tests against an error-free version of Counter.java to ensure that all tests pass. Then we will run your tests against your turned in version of Counter.java to see the failed Reset test. 
 
 ## Problem #2 (60 points)
@@ -123,7 +132,7 @@ Your task is to implment the following methods:
 |-------------|-------------|
 | `public RockPaperScissors()`| constructor for the class, initializes the member | T
 | `static String genCPUMove()` | generates a random String ("r", "s", or "p")|
-| `public void expandCapacity()`   | doubles the size of the systemMoves array|
+| `public void expandCapacity()`   | doubles the size of the systemMoves array and copies over the contents of the old one|
 | `public void addSystemMove(String myMove)` | adds myMove to the end of the systemMoves array |
 | `public void play(String playerMove, String compMove)` | determines game outcome and increments variables accordingly|
 
@@ -137,7 +146,7 @@ Here are some detailed requirements of the game play and specifics about the pro
 * You will write your code for the methods described above.  Please **do not** alter the provided variable names in the starter code, we will test your code using these variable. Additonally, do not delete variables or change the number of arguments in the methods. Doing so will result in incorrect auto-graded results. 
 * In the starter code, we have proivded the necessary Strings for when you need to print. Use these for consistency for when we test your output. 
 * The game should track the full move history for both players.  It should store the move history of the system in an array of Strings (`systemMoves`) and the move history of the user in a ArrayList of Strings (`userMoves`).  These variables are already set up in the starter code.  You just need to use them.
-* The array that stores the system’s moves should be initialized to a capacity of 5 in the constructor.  As the system enters more moves than the array can hold, use `expandCapacity()` to make a new array and copy over the contents of the old one.  The new array should always be twice the size of the old array.  E.g. on the 6th move, the array becomes size 10, on the 11th move it becomes size 20, etc.  You must do this resizing and copying “from scratch”.  That is, you have to write the code yourself, and **may NOT use any method in Java’s Arrays class. You will only receive half credit if you do.** In your `addSystemMove` method you will need to check when the capacity is reached before you add the computer's move to the array. 
+* The array that stores the system’s moves should be initialized to a capacity of 5 in the constructor. In your `addSystemMove` method you will need to check when the capacity is reached before you add the computer's move to the array. As the system enters more moves than the array can hold, use `expandCapacity()` to make a new array and copy over the contents of the old one.  The new array should always be twice the size of the old array.  E.g. on the 6th move, the array becomes size 10, on the 11th move it becomes size 20, etc.  You must do this resizing and copying “from scratch”.  That is, you have to write the code yourself, and **may NOT use any method in Java’s Arrays class. You will only receive half credit if you do.** 
 * Your program should gracefully handle incorrect input by re-prompting the user until they enter valid input.  You should look for the letters r, s and p exactly.
 * The game should repeat until the user enters "q"
 * At the end of the game, the system should print out up to the last 10 games, in reverse order.  If there has not been 10 games, it should print out as many as has been played. It should also print the win and tie statistics as in the example. Use the provided `end()` method to achieve this. 
@@ -147,3 +156,7 @@ Here are some detailed requirements of the game play and specifics about the pro
 
 ## Submission
 [//]: # (TODO: Add submission instructions for Gradescope)
+Submit the following files to Gradescope under the assignment "Programming Assignment 1":
+- Counter.java
+- CounterTest.java
+- RockPaperScissors.java
