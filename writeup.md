@@ -5,7 +5,7 @@
 ### Useful Resources:
 Throughout this assignment, you may find the following resources helpful.  Refer to them BEFORE posting questions on Piazza.
 - [Connecting to the lab machines remotely](https://drive.google.com/file/d/1I7b7QXRVCL2rjgiLU9XbWDFa03g9AIjc/view?usp=sharing)
-- [running bash on Windows](https://docs.google.com/document/d/1SMnopsKw0lHWCxkQ0ETgkfLFdfonjGGh4CgfagnFcSU/edit)
+- [running bash on Windows](https://drive.google.com/file/d/1bFXllnDhmDjTE5831Zxs8-ooIbHlpPQG/view?usp=sharing)
 - [Unix reference sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
 - [JUnit testing tutorial](https://www.tutorialspoint.com/junit/junit_environment_setup.htm)
 
@@ -28,14 +28,32 @@ The goal of this assignment is to re-familiarize yourself with the command line,
 ### Logistics:
 In EACH AND EVERY FILE that you turn in, we need the following in comments at the top of each file.  These are essential so that we can more easily process your submissions and ensure that you receive proper credit. This is a very large class with about 700 students when combining both lectures. **No name, no points**. 
 
-NAME: <your name>  
-ID: <your student ID>  
-EMAIL: <your email>  
+NAME: &lt;your name&gt;\
+ID: &lt;your student ID&gt;\
+EMAIL: &lt;your email&gt;
 
 
 ## Getting Started
-We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://docs.google.com/document/d/1AM888aGCagZRQYSY3wgtzboTnHHzLOEnuUgl85_oMJQ/edit?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.  
+We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://drive.google.com/file/d/1I7b7QXRVCL2rjgiLU9XbWDFa03g9AIjc/view?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.  
 Create a subdirectory call “pa1” in your class account.  All of your files for this assignment should be placed in that subdirectory.  If you cannot remember how to create directories, refer to a [unix tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) or [reference sheet](https://files.fosswire.com/2007/08/fwunixref.pdf).  
+
+
+## Style
+On this assignment, we will give you feedback on style but not deduct points for problems with style. For future assignments, we will be grading the following for style:
+
+1. File header
+2. Class header
+3. Method header(s)
+4. Inline comments
+5. Proper indentation
+6. Descriptive variable names
+7. No magic numbers
+8. Reasonably short methods (if you have implemented each method according to specification in this write-up, you’re fine). This is not enforced as strictly.
+9. Lines shorter than 80 characters
+10. Javadoc conventions (@param, @return tags, /** comments */, etc.)  
+
+A full [style guide](https://sites.google.com/view/cse12spr20/style-guide) can be found here. If you need any clarifications, feel free to ask on Piazza.
+
 
 ## Problem #0
 Read and sign the Integrity of Scholarship agreement for CSE 12 [here](https://forms.gle/KacmAMaa9MHNftti8). **You cannot earn any credit in CSE 12 until you have done so.**
@@ -124,6 +142,8 @@ I won: 50.00%
 You won: 16.67%
 We tied: 33.33%
 ```
+Additional output examples can be viewed at the end of the writeup under "**Example Output for Problem 2**".
+
 
 Do not change the starter code. However, you may add additional helper methods.
 Your task is to implement the following methods:
@@ -133,8 +153,8 @@ Your task is to implement the following methods:
 | `public RockPaperScissors()`| constructor for the class, initializes the member | T
 | `static String genCPUMove()` | generates a random String ("r", "s", or "p")|
 | `public void expandCapacity()`   | doubles the size of the systemMoves array and copies over the contents of the old one|
-| `public void addSystemMove(String sysMove)` | adds myMove to the end of the systemMoves array |
-| `public void play(String playerMove, String sysMove)` | determines game outcome and increments variables accordingly|
+| `public void addSystemMove(String sysMove)` | adds sysMove to the end of the systemMoves array |
+| `void play(String playerMove, String sysMove)` | determines game outcome and increments variables accordingly|
 
 We have given you the `main()` method as well as `end()`. Do not modify `end()`. You are, however, welcome to change main() while testing. Make sure before you submit that your code runs with the original `main()` method given.  
 * `main()` : while playing is true, get the user's move and the computer's move and calls the `play` method.
@@ -143,6 +163,7 @@ We have given you the `main()` method as well as `end()`. Do not modify `end()`.
 **Tip**: look at the `end()` method to see what variables you will need to keep track of and increment during the game. 
 
 Here are some detailed requirements of the game play and specifics about the program:
+* You may not use additional Java packages from what is given. Please do not include your own import statements. You should be able to do the assignment with what is given.
 * You will write your code for the methods described above.  Please **do not** alter the provided variable names in the starter code, we will test your code using these variable. Additonally, do not delete variables or change the number of arguments in the methods. Doing so will result in incorrect auto-graded results. 
 * In the starter code, we have proivded the necessary Strings for when you need to print. Use these for consistency for when we test your output. 
 * The game should track the full move history for both players.  It should store the move history of the system in an array of Strings (`systemMoves`) and the move history of the user in a ArrayList of Strings (`userMoves`).  These variables are already set up in the starter code.  You just need to use them.
@@ -168,3 +189,88 @@ Submit the following files to Gradescope under the assignment "Programming Assig
 - RockPaperScissors.java
 
 If you are working on the PA via ieng6 remotely you can utilize WinSCP or Mac SCP to retrieve your files for submission.
+
+## Example Output for Problem 2
+Enter 'q' immediately:
+```
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+q
+Thanks for playing!
+Our most recent games were: 
+Our overall stats are:
+I won: NaN%
+You won: NaN%
+We tied: NaN%
+```
+More than 10 games (with invalid input):
+```
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+r
+I chose scissors. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+s
+I chose rock. I win!
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+p
+I chose rock. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+s
+I chose rock. I win!
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+r
+I chose scissors. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+rr
+That is not a valid move. Please try again.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+t
+That is not a valid move. Please try again.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+k
+That is not a valid move. Please try again.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+s
+I chose rock. I win!
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+i
+That is not a valid move. Please try again.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+p
+I chose rock. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+r
+I chose scissors. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+s
+I chose paper. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+p
+I chose scissors. I win!
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+s
+I chose paper. You win.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+p
+I chose paper. It's a tie.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+r
+I chose rock. It's a tie.
+Let's play! What's your move? (r=rock, p=paper, s=scissors or q to quit)
+q
+Thanks for playing!
+Our most recent games were: 
+Me: r, You: r
+Me: p, You: p
+Me: p, You: s
+Me: s, You: p
+Me: p, You: s
+Me: s, You: r
+Me: r, You: p
+Me: r, You: s
+Me: s, You: r
+Me: r, You: s
+Our overall stats are:
+I won: 30.77%
+You won: 53.85%
+We tied: 15.38%
+```
