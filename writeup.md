@@ -58,7 +58,7 @@ A full [style guide](https://sites.google.com/view/cse12spr20/style-guide) can b
 ## Problem #0
 Read and sign the Integrity of Scholarship agreement for CSE 12 [here](https://forms.gle/KacmAMaa9MHNftti8). **You cannot earn any credit in CSE 12 until you have done so.**
 
-## Problem #1 (40  points) 
+## Problem #1 (10  points) 
 The purpose of this problem is to get you comfortable with JUnit 4 on the command line.  You may use any program you like to edit your java files (e.g., Dr. Java, vim, Notepad++, or even Eclipse), but we would like you to compile the program and run the JUnit tests from the command line.
 
 Clone/download the files from [this GitHub repository](https://github.com/CaoAssignments/cse12sp20-pa1-starter).
@@ -93,9 +93,9 @@ OK (5 tests)
 Steps to complete for this problem:
 1. First, complete the TODO items in CounterTest.java.
 2. Next, run all of the tests from the command line. 
-3. Finally, modify Counter.java so that your Reset test fails.  The version  of Counter.java that does not pass the Reset test is the version you should turn in. To be clear, Counter.java must compile but it should fail a reasonable Reset test.  We will run your tests against an error-free version of Counter.java to ensure that all tests pass. Then we will run your tests against your turned in version of Counter.java to see the failed Reset test. 
-
-## Problem #2 (60 points)
+3. Finally, modify Counter.java so that your Reset test fails.  The version  of Counter.java that does **not** pass the Reset test is the version you should turn in. To be clear, Counter.java must compile but it should fail a reasonable Reset test.  We will run your tests against an error-free version of Counter.java to ensure that all tests pass. Then we will run your tests against your turned in version of Counter.java to see the failed Reset test.   
+***Important***: You may not leave the Reset method blank, you will not recieve credit for the problem if you do.
+## Problem #2 (90 points)
 In this problem you will create a computer game to play the game of Rock-Paper-Scissors with a user.  If you are unfamiliar with this game, you can read about it on [Wikipedia here](http://en.wikipedia.org/wiki/Rock-paper-scissors).  
 
 We have provided starter code for this problem.  Copy the following from the the public GitHub repository:  
