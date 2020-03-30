@@ -1,17 +1,15 @@
-
+/**
+ * TODO:  Add your name, ID, and email as specified in the instructions
+ */
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
-import static org.junit.Assert.*;
-
 import java.util.Collection;
 import java.util.Arrays;
 
-
+import static org.junit.Assert.*;
 import org.junit.*;
-
 
 public class RockPaperScissorsTest {
 
@@ -55,6 +53,5 @@ public class RockPaperScissorsTest {
         assertEquals(testGame.totalGames.getCount(), 6);
         assertEquals(testGame.playerWin.getCount(), 3);
         assertEquals(testGame.cpuWin.getCount(), 3);
-
     }
 }

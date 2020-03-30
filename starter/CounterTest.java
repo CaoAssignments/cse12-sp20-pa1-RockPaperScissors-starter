@@ -1,16 +1,15 @@
-/* TODO:  Add your name, login, and ID as specified in the instructions */
-
-
+/**
+ * TODO:  Add your name, ID, and email as specified in the instructions
+ */
 
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class CounterTest
-{
-
+public class CounterTest {
     private Counter counter, counter2;
-    /* this sets up the test fixture. JUnit invokes this method before
-        every testXXX method.  The @Before tag tells JUnit to run this method
+
+    /* This sets up the test fixture. JUnit invokes this method before
+       every testXXX method. The @Before tag tells JUnit to run this method
        before each test */
     @Before
     public void setUp() throws Exception {
@@ -47,22 +46,24 @@ public class CounterTest
     @Test
     public void testReset() {
         System.out.println("Checking Reset");
-        // TODO: Complete the Test Case to check if the reset functionality works as expected.
+        // TODO: Complete the Test Case to check if the reset 
+        // functionality works as expected.
     }
 
     @Test
     public void testDecrement() {
         System.out.println("Checking Decrement");
-        for (int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             counter.increment();
             counter2.increment();
         }
-        for (int i = 0; i < 6; i++)
-        {
+
+        for (int i = 0; i < 6; i++) {
             counter.decrement();
             counter2.decrement();
         }
-        // TODO: Complete the Test Case to check if the decrement functionality works as expected.
+
+        // TODO: Complete the Test Case to check if the decrement 
+        // functionality works as expected.
     }
 }
