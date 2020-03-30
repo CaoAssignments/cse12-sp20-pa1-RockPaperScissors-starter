@@ -4,8 +4,8 @@
 (Tuesday, April 7 @ 11:59pm w/ slip day)
 ### Useful Resources:
 Throughout this assignment, you may find the following resources helpful.  Refer to them BEFORE posting questions on Piazza.
-- [Connecting to the lab machines remotely](https://docs.google.com/document/d/1AM888aGCagZRQYSY3wgtzboTnHHzLOEnuUgl85_oMJQ/edit)
-- [running bash on Windows](https://docs.google.com/document/d/1SMnopsKw0lHWCxkQ0ETgkfLFdfonjGGh4CgfagnFcSU/edit)
+- [Connecting to the lab machines remotely](https://drive.google.com/file/d/1I7b7QXRVCL2rjgiLU9XbWDFa03g9AIjc/view?usp=sharing)
+- [running bash on Windows](https://drive.google.com/file/d/1bFXllnDhmDjTE5831Zxs8-ooIbHlpPQG/view?usp=sharing)
 - [Unix reference sheet](https://files.fosswire.com/2007/08/fwunixref.pdf)
 - [JUnit testing tutorial](https://www.tutorialspoint.com/junit/junit_environment_setup.htm)
 
@@ -28,9 +28,9 @@ The goal of this assignment is to re-familarize yourself with the command line, 
 ### Logistics:
 In EACH AND EVERY FILE that you turn in, we need the following in comments at the top of each file.  These are essential so that we can more easily process your submissions and ensure that you receive proper credit. This is a very large class with about 700 students when combining both lectures. **No name, no points**. 
 
-NAME: <your name>  
-ID: <your student ID>  
-EMAIL: <your email>  
+NAME: `<your name>`  
+ID: `<your student ID>`  
+EMAIL: `<your email>`  
 
 
 ## Getting Started
