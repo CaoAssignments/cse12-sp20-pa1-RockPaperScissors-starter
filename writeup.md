@@ -34,7 +34,7 @@ EMAIL: &lt;your email&gt;
 
 
 ## Getting Started
-We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://drive.google.com/file/d/1I7b7QXRVCL2rjgiLU9XbWDFa03g9AIjc/view?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.
+We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://drive.google.com/file/d/1I7b7QXRVCL2rjgiLU9XbWDFa03g9AIjc/view?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.\
 Create a subdirectory call “pa1” in your class account.  All of your files for this assignment should be placed in that subdirectory.  If you cannot remember how to create directories, refer to a [unix tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) or [reference sheet](https://files.fosswire.com/2007/08/fwunixref.pdf).  
 
 ## Problem #0
