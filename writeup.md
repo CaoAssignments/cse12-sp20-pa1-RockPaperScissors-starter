@@ -133,8 +133,8 @@ Your task is to implment the following methods:
 | `public RockPaperScissors()`| constructor for the class, initializes the member | T
 | `static String genCPUMove()` | generates a random String ("r", "s", or "p")|
 | `public void expandCapacity()`   | doubles the size of the systemMoves array and copies over the contents of the old one|
-| `public void addSystemMove(String myMove)` | adds myMove to the end of the systemMoves array |
-| `public void play(String playerMove, String compMove)` | determines game outcome and increments variables accordingly|
+| `public void addSystemMove(String sysMove)` | adds sysMove to the end of the systemMoves array |
+| `void play(String playerMove, String sysMove)` | determines game outcome and increments variables accordingly|
 
 We have given you the `main()` method as well as `end()`. Do not modify `end()`. You are, however, welcome to change main() while testing. Make sure before you submit that your code runs with the original `main()` method given.  
 * `main()` : while playing is true, get the user's move and the computer's move and calls the `play` method.
