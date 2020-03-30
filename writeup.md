@@ -22,7 +22,7 @@ Throughout this assignment, you may find the following resources helpful.  Refer
 
 
 ### Goal:
-The goal of this assignment is to re-familarize yourself with the command line, IDEs/text editors, and Java. Additionally, you will gain familiarity with the course turn-in procedures, learn basics of unit testing with JUnit, and implement a few modest-sized programming problems using Arrays and ArrayLists from the Java Collections Framework.
+The goal of this assignment is to re-familiarize yourself with the command line, IDEs/text editors, and Java. Additionally, you will gain familiarity with the course turn-in procedures, learn basics of unit testing with JUnit, and implement a few modest-sized programming problems using Arrays and ArrayLists from the Java Collections Framework.
 
 
 ### Logistics:
@@ -126,15 +126,15 @@ We tied: 33.33%
 ```
 
 Do not change the starter code. However, you may add additional helper methods.
-Your task is to implment the following methods:
+Your task is to implement the following methods:
 
 | Method Name | Description |
 |-------------|-------------|
 | `public RockPaperScissors()`| constructor for the class, initializes the member | T
 | `static String genCPUMove()` | generates a random String ("r", "s", or "p")|
 | `public void expandCapacity()`   | doubles the size of the systemMoves array and copies over the contents of the old one|
-| `public void addSystemMove(String myMove)` | adds myMove to the end of the systemMoves array |
-| `public void play(String playerMove, String compMove)` | determines game outcome and increments variables accordingly|
+| `public void addSystemMove(String sysMove)` | adds myMove to the end of the systemMoves array |
+| `public void play(String playerMove, String sysMove)` | determines game outcome and increments variables accordingly|
 
 We have given you the `main()` method as well as `end()`. Do not modify `end()`. You are, however, welcome to change main() while testing. Make sure before you submit that your code runs with the original `main()` method given.  
 * `main()` : while playing is true, get the user's move and the computer's move and calls the `play` method.
@@ -166,3 +166,5 @@ Submit the following files to Gradescope under the assignment "Programming Assig
 - Counter.java
 - CounterTest.java
 - RockPaperScissors.java
+
+If you are working on the PA via ieng6 remotely you can utilize WinSCP or Mac SCP to retrieve your files for submission.
