@@ -78,10 +78,10 @@ public class RockPaperScissors
 
     /**
      * Adds system move to systemMoves array
-     * @param  sysMove - move of the system
+     * @param  myMove - move of the system
      * @return void
     */
-    public void addSystemMove(String sysMove) {
+    public void addSystemMove(String myMove) {
 		// TODO
     }
 
@@ -92,7 +92,7 @@ public class RockPaperScissors
      * @param sysMove - move of the system
      * @return void
      */
-    void play(String playerMove, String sysMove) {
+    public void play(String playerMove, String sysMove) {
 		
 		// TODO : write code for the game
 

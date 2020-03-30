@@ -28,13 +28,13 @@ The goal of this assignment is to re-familarize yourself with the command line, 
 ### Logistics:
 In EACH AND EVERY FILE that you turn in, we need the following in comments at the top of each file.  These are essential so that we can more easily process your submissions and ensure that you receive proper credit. This is a very large class with about 700 students when combining both lectures. **No name, no points**. 
 
-NAME: `<your name>`  
-ID: `<your student ID>`  
-EMAIL: `<your email>`  
+NAME: &lt;your name&gt;\
+ID: &lt;your student ID&gt;\
+EMAIL: &lt;your email&gt;
 
 
 ## Getting Started
-We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://docs.google.com/document/d/1AM888aGCagZRQYSY3wgtzboTnHHzLOEnuUgl85_oMJQ/edit?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.  
+We strongly recommend that you work on the lab machines ([for remote access--see instructions here](https://drive.google.com/file/d/1I7b7QXRVCL2rjgiLU9XbWDFa03g9AIjc/view?usp=sharing)), but if you choose to work on your own machine, make sure your code runs correctly on ieng6, as that is where we will be testing it. Instructions below assume you are using the lab machines.
 Create a subdirectory call “pa1” in your class account.  All of your files for this assignment should be placed in that subdirectory.  If you cannot remember how to create directories, refer to a [unix tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/) or [reference sheet](https://files.fosswire.com/2007/08/fwunixref.pdf).  
 
 ## Problem #0
